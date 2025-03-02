@@ -1,0 +1,15 @@
+<header>
+  <h1>QR Code App</h1>
+</header>
+
+<div class="wrapper">
+  <div class="input-row">
+    <input [(ngModel)]="input" type="text" placeholder="Enter text or url">
+    <button (click)="getBEresponse()">Generate</button>
+  </div>
+  @if (output().length > 0) {
+    <div class="qr-code-box">
+      <img [src]="'data:image/jpg;base64,'+ output()" alt="qr"/>
+    </div>
+  }
+</div>
